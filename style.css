@@ -1,0 +1,345 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+}
+
+
+.firsth{
+    font-size: 60px;
+}
+
+
+
+html{
+    scroll-behavior: smoth;/*it scroll to the home,about or any menu slowly*/
+}
+
+body{
+    background:black;
+    color: white;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(header.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+#container{
+    padding: 10px 10%;/*20px:top and bottom,10%:left and right*/
+}
+
+#container nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block;/*display horizontal*/
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    background: red;
+    left: 0;
+    bottom: -6px;
+    height: 3px;
+    width: 0;/*to hide the background*/
+    transition: 0.5s;/*transsition line*/
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 20px;
+    padding-left: 28px;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+span{
+    color: red;
+}
+
+
+
+/*-------------------ABOUT-----------------------------*/
+#about{
+    color: #ababab;
+    padding: 80px 0;
+}
+
+.container{
+    padding: 10px 10%;/*20px:top and bottom,10%:left and right*/
+}
+.row{
+    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+   flex-basis: 35%; /*The starting size of each item.*/
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: rgb(229, 229, 235);
+}
+
+.tab-titles{
+    display:flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    font-size: 18px;
+    font-weight: 500;/*bold*/
+    cursor: pointer;
+    position: relative;
+    margin-right: 50px;
+}
+
+.tab-links::after{
+    content: "";
+    position: absolute;
+    background: red;
+    left: 0;
+    bottom: -6px;
+    height: 3px;
+    width: 0;
+    transition: 0.5s;
+}
+
+.tab-links.active-link:hover::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: orange;
+    font-size: 14px;
+}
+
+/*hiding all the tab contents in about when i click it became visible*/
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block; /*if click this it will be visible*/
+}
+
+
+/********************************SERVICE**************************************************************************/
+.services{
+    padding: 30px 0;
+}
+
+.service-list{
+    display: grid;
+    grid-gap:5px;
+    grid-template-columns: repeat(auto-fit,minmax(50px,1fr));
+    /*grid-template-columns: 1fr 2fr 3fr;*/  
+}
+
+.service-list div{
+    background-color: #ababab;
+    color: black;
+    outline: 0;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border: 0;
+    border-radius: 10px;
+    transition: background 0.5s,transform 0.5s;
+}
+
+/*change size of the icon*/
+.service-list div i{
+    font-size: 40px;
+    margin-bottom: 30px;/*add space in bottom*/
+}
+
+.service-list div h2{
+    font-size: 30px;
+    font-weight: 300px;
+    margin-bottom: 30px;
+}
+
+.service-list div a{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.service-list div:hover{
+    background: rgb(11, 119, 38);
+    transform: translateY(-10px);
+}
+
+
+/*----------------------------------contact--------------------------------------------------------*/
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color:#ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;/*it provide gap at the top*/
+}
+
+.social-icons a{
+    text-decoration: none;
+    color: #ff004f;
+    font-size: 30px;
+    margin-right: 15px;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+color: rgb(22, 200, 39);
+transform: translateY(-5px);
+}
+
+.btn-btn2{
+    background: green;
+    display: inline-block;
+    width: 90px;
+    height: 60px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 0;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 6px;
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright{
+    text-align: center;
+    width: 100%;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20PX;
+}
+
+.copyright i{
+    color: #ff115c;
+}
+
+
+
+
+/* Hide the sidemenu by default on smaller screens */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul#sidemenu {
+        display: none; /* Initially hide the menu */
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 20px; /* Adjust spacing */
+        width: 100%; /* Make menu take full width */
+    }
+
+    ul#sidemenu li {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%; /* Make each item take full width */
+    }
+
+    /* Show the hamburger icon */
+    .fa-bars {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        color: white;
+    }
+}
+
+/* Hide the hamburger icon on larger screens */
+@media screen and (min-width: 769px) {
+    .fa-bars {
+        display: none;
+    }
+}
